@@ -1,26 +1,35 @@
 # sniffer.py
 from scapy.all import sniff, IP
 import threading
-from packet_data import format_packet_data
 
-stop_sniffing_flag = False
-sniff_thread = None
+class Sniffer:
+    def __init__(self):
+        self.running = False
+        self.paused = False
+        self.thread = None
+        self.callback = None
 
-def packet_callback(packet, callback):
-    if IP in packet:
-        info = format_packet_data(packet)
-        callback(info)  # Send data to GUI
+    def _sniff(self):
+        sniff(prn=self._process_packet, stop_filter=lambda x: not self.running, store=False)
 
-def start_sniffing(callback):
-    global stop_sniffing_flag, sniff_thread
-    stop_sniffing_flag = False
+    def _process_packet(self, packet):
+        if self.paused or not self.callback:
+            return
+        if IP in packet:
+            self.callback(packet)
 
-    def sniffing():
-        sniff(prn=lambda pkt: packet_callback(pkt, callback), stop_filter=lambda x: stop_sniffing_flag, store=0)
+    def start(self, callback):
+        self.callback = callback
+        self.running = True
+        self.paused = False
+        self.thread = threading.Thread(target=self._sniff, daemon=True)
+        self.thread.start()
 
-    sniff_thread = threading.Thread(target=sniffing, daemon=True)
-    sniff_thread.start()
+    def stop(self):
+        self.running = False
 
-def stop_sniffing():
-    global stop_sniffing_flag
-    stop_sniffing_flag = True
+    def pause(self):
+        self.paused = True
+
+    def resume(self):
+        self.paused = False
