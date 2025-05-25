@@ -1,6 +1,13 @@
 # main.py
-from gui import create_gui
-from sniffer import start_sniffing, stop_sniffing
+from gui import PacketSnifferGUI
+from sniffer import Sniffer
+import tkinter as tk
+
+def create_gui(sniffer):
+    root = tk.Tk()
+    PacketSnifferGUI(root, sniffer)
+    root.mainloop()
 
 if __name__ == "__main__":
-    create_gui(start_sniffing, stop_sniffing)
+    sniffer = Sniffer()
+    create_gui(sniffer)
