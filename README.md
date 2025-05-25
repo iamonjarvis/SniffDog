@@ -41,7 +41,8 @@
 3. **Click** **Stop Sniffing** to end
 
 ##Preview 
-![image](https://github.com/user-attachments/assets/a8f51d62-6064-4f2a-83c3-eadf41486567)
+![image](https://github.com/user-attachments/assets/10988bb3-2e45-4968-ba2e-57e738a357c1)
+
 
 
 
