@@ -1,52 +1,98 @@
-# SniffDog
+# 🐶 SniffDog
 
-**SniffDog** is a Python/Tkinter packet sniffer with a live GUI that color-codes protocols, displays timestamps, ports, and headers, making network monitoring simple and visual.
+**SniffDog** is a Python/Tkinter-powered GUI packet sniffer that makes network monitoring simple, visual, and efficient. It features real-time packet capture with protocol-based color-coding, IP/port details, timestamps, and a clean dark-themed interface.
 
-## Features
+---
 
-- Live packet capture with start/stop controls
-- Color-coded protocols (TCP, UDP, ICMP, others)
-- Displays timestamp, source/destination IP and ports, header summary
-- Interface selection and basic filter input
-- Dark-themed, scrollable table view
+## ✨ Features
 
-## Installation
+- 🕵️‍♂️ Live packet capture with Start / Pause / Resume / Stop
+- 🎨 Color-coded protocol rows (TCP, UDP, ICMP, Others)
+- 🧠 Displays timestamp, source/destination IPs & ports, and protocol type
+- 🌐 Shows host IP address
+- 🖤 Modern dark-themed scrollable table view
+- 🐧 Cross-platform support (Tested on Linux, .deb & Snap available)
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/SniffDog.git
-   cd SniffDog
-   ```
+---
 
-2. **Set up virtual environment**:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ```
+## 📦 Installation
 
-3. **Install Tkinter** (if not already):
-   ```bash
-   sudo apt install python3-tk
-   ```
+### ✅ Snap Store (Recommended – 1-Click Install)
+```bash
+sudo snap install sniffdog
+```
 
-## Usage
+> You must use `--devmode` if you're testing locally:
+```bash
+sudo snap install sniffdog --devmode
+```
 
-1. **Run with elevated privileges**:
-   ```bash
-   chmod +x run_sniffer.sh
-   ./run_sniffer.sh
-   ```
-2. **Click** **Start Sniffing** to begin
-3. **Click** **Stop Sniffing** to end
+Snap Store: https://snapcraft.io/sniffdog
 
-##Preview 
-![image](https://github.com/user-attachments/assets/10988bb3-2e45-4968-ba2e-57e738a357c1)
+---
 
+### ✅ .deb Package
+Download `.deb` from [Releases](https://github.com/iamonjarvis/SniffDog/releases)
 
+Install:
+```bash
+sudo dpkg -i sniffdog_1.0_amd64.deb
+```
 
+---
 
-## License
+### ✅ Manual (from source)
+
+1. **Clone the repo**:
+```bash
+git clone https://github.com/iamonjarvis/SniffDog.git
+cd SniffDog
+```
+
+2. **Create virtual environment**:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+3. **Install dependencies (if not already)**:
+```bash
+sudo apt install python3-tk
+```
+
+---
+
+## ▶️ Usage
+
+1. Run SniffDog with:
+```bash
+python3 main.py
+```
+
+2. Or use your `.deb` or `sniffdog` command from terminal (if installed via Snap)
+
+---
+
+## 📸 Preview
+
+![SniffDog Screenshot](https://github.com/user-attachments/assets/10988bb3-2e45-4968-ba2e-57e738a357c1)
+
+---
+
+## 📄 License
 
 MIT © Sahil Patra 2025
 
+---
+
+## 🔗 Links
+
+- 🔗 [Snap Store](https://snapcraft.io/sniffdog)
+- 💻 [GitHub Repository](https://github.com/iamonjarvis/SniffDog)
+- 🌐 [Portfolio](https://sahilpatra.site)
+
+---
+
+> Built with 🐍 Python + 🖼️ Tkinter + 📡 Scapy  
+> Made with ❤️ by Sahil Patra
