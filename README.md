@@ -41,20 +41,34 @@ SniffDog is a lightweight, Python-based GUI packet sniffing tool built for Linux
 ## 📦 Python Dependencies 
 
 Install them via: 
-
-pip install -r requirements.txt  
+```
+pip install -r requirements.txt
+```
 
 Make sure to run the app with sudo to allow packet capture. 
 
 ## 🚀 Running SniffDog 
-
-sudo python3 main.py 
+```
+sudo python3 main.py
+```
 
 You should see a GUI where you can start, pause, stop, filter, and export packet data. 
 
 ## 🛡️ Permissions 
 
 SniffDog requires root privileges to access the network interface for sniffing. Always be cautious when running GUI apps with elevated permissions. 
+
+## ⚠️ Root Access Required
+
+SniffDog uses raw sockets to sniff network traffic, which requires superuser privileges.
+
+**Please run the application using:**
+
+```bash
+sudo sniffdog
+```
+Running without sudo will result in permission errors and the sniffer not working.
+
 
 ## Contact
 * sahilp123456@gmail.com
