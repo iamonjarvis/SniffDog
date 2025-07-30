@@ -1,98 +1,66 @@
-# 🐶 SniffDog
+# 🐾 SniffDog - GUI Network Packet Sniffer for Linux 
 
-**SniffDog** is a Python/Tkinter-powered GUI packet sniffer that makes network monitoring simple, visual, and efficient. It features real-time packet capture with protocol-based color-coding, IP/port details, timestamps, and a clean dark-themed interface.
+SniffDog is a lightweight, Python-based GUI packet sniffing tool built for Linux. It provides real-time packet capture, filtering, pausing/resuming, and CSV export. Designed with a modern interface using Tkinter, SniffDog is ideal for students, developers, and network hobbyists. 
 
----
+## ✨ Features 
 
-## ✨ Features
+*   ✅ Real-time packet sniffing 
+    
 
-- 🕵️‍♂️ Live packet capture with Start / Pause / Resume / Stop
-- 🎨 Color-coded protocol rows (TCP, UDP, ICMP, Others)
-- 🧠 Displays timestamp, source/destination IPs & ports, and protocol type
-- 🌐 Shows host IP address
-- 🖤 Modern dark-themed scrollable table view
-- 🐧 Cross-platform support (Tested on Linux, .deb & Snap available)
+*   ⏸️ Pause/Resume live capture 
+    
 
----
+*   🔍 Protocol filter (TCP, UDP, ICMP, All) 
+    
 
-## 📦 Installation
+*   📤 Export packets to .csv 
+    
 
-### ✅ Snap Store (Recommended – 1-Click Install)
-```bash
-sudo snap install sniffdog
-```
+*   💻 Shows your host IP address 
+    
 
-> You must use `--devmode` if you're testing locally:
-```bash
-sudo snap install sniffdog --devmode
-```
+*   🌙 Dark-themed professional UI 
+    
 
-Snap Store: https://snapcraft.io/sniffdog
+## 📸 Screenshots 
 
----
+<img width="1083" height="670" alt="image" src="https://github.com/user-attachments/assets/a9918a2f-6f54-44ec-b473-64cc91e56187" />
 
-### ✅ .deb Package
-Download `.deb` from [Releases](https://github.com/iamonjarvis/SniffDog/releases)
 
-Install:
-```bash
-sudo dpkg -i sniffdog_1.0_amd64.deb
-```
+## 🔧 Requirements 
 
----
+*   Python 3.6+ 
+    
 
-### ✅ Manual (from source)
+*   Linux OS 
+    
 
-1. **Clone the repo**:
-```bash
-git clone https://github.com/iamonjarvis/SniffDog.git
-cd SniffDog
-```
+*   Root privileges (required for packet sniffing) 
+    
 
-2. **Create virtual environment**:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+## 📦 Python Dependencies 
 
-3. **Install dependencies (if not already)**:
-```bash
-sudo apt install python3-tk
-```
+Install them via: 
 
----
+pip install -r requirements.txt  
 
-## ▶️ Usage
+Make sure to run the app with sudo to allow packet capture. 
 
-1. Run SniffDog with:
-```bash
-python3 main.py
-```
+## 🚀 Running SniffDog 
 
-2. Or use your `.deb` or `sniffdog` command from terminal (if installed via Snap)
+sudo python3 main.py 
 
----
+You should see a GUI where you can start, pause, stop, filter, and export packet data. 
 
-## 📸 Preview
+## 🛡️ Permissions 
 
-![SniffDog Screenshot](https://github.com/user-attachments/assets/10988bb3-2e45-4968-ba2e-57e738a357c1)
+SniffDog requires root privileges to access the network interface for sniffing. Always be cautious when running GUI apps with elevated permissions. 
 
----
+## Contact
+* sahilp123456@gmail.com
+  
+* https://www.sahilpatra.site
 
-## 📄 License
+## 🧾 License 
 
-MIT © Sahil Patra 2025
-
----
-
-## 🔗 Links
-
-- 🔗 [Snap Store](https://snapcraft.io/sniffdog)
-- 💻 [GitHub Repository](https://github.com/iamonjarvis/SniffDog)
-- 🌐 [Portfolio](https://sahilpatra.site)
-
----
-
-> Built with 🐍 Python + 🖼️ Tkinter + 📡 Scapy  
-> Made with ❤️ by Sahil Patra
+MIT License © 2025 Sahil Patra
